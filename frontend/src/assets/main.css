@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 font-sans antialiased;
+  }
+  
+  #app {
+    @apply h-screen;
+  }
+}
+
+@layer components {
+  .ant-layout {
+    @apply min-h-screen;
+  }
+
+  .ant-layout-sider {
+    @apply shadow-lg;
+  }
+
+  .ant-layout-header {
+    @apply bg-white p-0 shadow-sm;
+  }
+
+  .ant-layout-content {
+    @apply min-h-[calc(100vh-64px-70px)] bg-gray-50 p-6;
+  }
+
+  .ant-layout-footer {
+    @apply flex h-[70px] items-center justify-center bg-white border-t border-gray-100 p-4 text-gray-500;
+  }
+
+  .ant-card {
+    @apply rounded-lg shadow-sm;
+  }
+
+  .ant-card-head {
+    @apply border-b border-gray-100 p-6;
+  }
+
+  .ant-card-body {
+    @apply p-6;
+  }
+
+  .ant-menu-item {
+    @apply my-1 rounded-lg transition-all duration-300;
+  }
+
+  .ant-menu-item:hover {
+    @apply bg-white/10;
+  }
+
+  .ant-menu-item-selected {
+    @apply bg-white/20;
+  }
+
+  .ant-btn {
+    @apply rounded-md;
+  }
+
+  .ant-input {
+    @apply rounded-md;
+  }
+
+  .ant-select {
+    @apply rounded-md;
+  }
+
+  .ant-badge {
+    @apply text-gray-500;
+  }
+
+  .ant-dropdown-link {
+    @apply text-gray-500 transition-colors duration-300;
+  }
+
+  .ant-dropdown-link:hover {
+    @apply text-blue-600;
+  }
+}
+
+/* 自定义样式 */
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 自定义样式 */
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+}
+
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+/* 热力图样式 */
+.ol-heatmap {
+  opacity: 0.8;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .ol-popup {
+    min-width: 200px;
+  }
+} 
