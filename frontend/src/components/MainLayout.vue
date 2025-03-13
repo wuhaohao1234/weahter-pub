@@ -18,13 +18,19 @@
           </template>
           <span>首页</span>
         </a-menu-item>
-        <a-menu-item key="weather">
+        <a-menu-item key="weather" @click="$router.push('/weather')">
           <template #icon>
             <cloud-outlined />
           </template>
           <span>天气查询</span>
         </a-menu-item>
-        <a-menu-item key="analysis">
+        <a-menu-item key="map" @click="$router.push('/map')">
+          <template #icon>
+            <environment-outlined />
+          </template>
+          <span>气象地图</span>
+        </a-menu-item>
+        <a-menu-item key="analysis" @click="$router.push('/analysis')">
           <template #icon>
             <bar-chart-outlined />
           </template>
@@ -108,7 +114,8 @@ import {
   BellOutlined,
   UserOutlined,
   SettingOutlined,
-  LogoutOutlined
+  LogoutOutlined,
+  EnvironmentOutlined
 } from '@ant-design/icons-vue'
 
 const collapsed = ref(false)
